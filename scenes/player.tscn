@@ -317,3 +317,13 @@ shape = SubResource("CircleShape2D_6n047")
 [node name="AudioJump" type="AudioStreamPlayer2D" parent="." unique_id=765356332]
 stream = ExtResource("3_qhqgy")
 volume_db = -16.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=723965145]
+zoom = Vector2(4, 4)
+limit_right = 1032
+limit_bottom = 240
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.3
+drag_right_margin = 0.3
+drag_bottom_margin = 0.15
