@@ -15,6 +15,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		trigger_hit_rumble()
 		audio_jump.play()
 		velocity.y = JUMP_VELOCITY
 
@@ -34,6 +35,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			animated_sprite.play('run')
 	else:
+		
 		animated_sprite.play('jump')
 	# Apply movement
 	if direction:
@@ -42,3 +44,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func trigger_hit_rumble():
+	var device_id = 0 # Default player 1 gamepad
+	var weak_motor = 0.4 # High-frequency rumble (subtle buzz)
+	var strong_motor = 0.8 # Low-frequency rumble (heavy impact)
+	var duration = 0.1 # In seconds
+
+	Input.start_joy_vibration(device_id, weak_motor, strong_motor, duration)

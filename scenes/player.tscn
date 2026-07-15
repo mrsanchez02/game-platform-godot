@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cyyb3ps3h4jx6" path="res://assets/sprites/knight.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cdpiphig38752" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="AudioStream" uid="uid://g0fmxfw6ts5j" path="res://assets/sounds/jump.wav" id="3_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://ccd4hrseksybb" path="res://scenes/touch_controls.tscn" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ni07"]
 atlas = ExtResource("1_3vyb7")
@@ -320,10 +321,18 @@ volume_db = -16.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=723965145]
 zoom = Vector2(4, 4)
-limit_right = 1032
+limit_right = 1048
 limit_bottom = 240
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 0.3
 drag_right_margin = 0.3
 drag_bottom_margin = 0.15
+
+[node name="Control" type="Control" parent="." unique_id=1204267912]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TouchControls" parent="Control" unique_id=1878081741 instance=ExtResource("4_dqkch")]
