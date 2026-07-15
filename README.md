@@ -12,6 +12,8 @@ After completing the original tutorial, I continued expanding it with custom
 features such as a title screen, configurable audio, fullscreen support,
 touch controls, controller support, haptic feedback and camera improvements.
 
+<img width="1134" height="607" alt="image" src="https://github.com/user-attachments/assets/421bb41f-0a58-4b27-8eec-71bab3b9f3fc" />
+
 ## Features
 
 - 2D platforming gameplay
