@@ -14,6 +14,8 @@ config/name="my first game"
 run/main_scene="uid://d2hrravtrr0ot"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+config/macos_native_icon="res://Knight.ico"
+config/windows_native_icon="res://Knight.ico"
 
 [audio]
 
