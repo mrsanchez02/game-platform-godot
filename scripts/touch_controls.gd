@@ -33,3 +33,4 @@ func _on_jump_pressed() -> void:
 
 func _on_jump_released() -> void:
 	jump.modulate.a = 1.0
+	

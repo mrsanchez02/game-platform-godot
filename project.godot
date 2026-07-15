@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="my first game"
-run/main_scene="uid://dagg46abcaeun"
+run/main_scene="uid://d2hrravtrr0ot"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -25,6 +25,7 @@ Music="*uid://dyls1kfy3jvlt"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
