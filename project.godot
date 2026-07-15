@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="my first game"
+config/name="Knights N' Slimes"
+config/description="A small 2D platformer built with Godot, featuring controller support, touch controls, audio settings and multi-platform builds."
 run/main_scene="uid://d2hrravtrr0ot"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://nf8tis7t5jg5"
 config/macos_native_icon="res://Knight.ico"
 config/windows_native_icon="res://Knight.ico"
 
@@ -30,6 +31,10 @@ Music="*uid://dyls1kfy3jvlt"
 window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor]
+
+movie_writer/movie_file="C:/Users/Thanos/Documents/game sandbox/knights-n-slimes-v-1.0.2.avi"
 
 [input]
 
@@ -64,4 +69,5 @@ move_right={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true

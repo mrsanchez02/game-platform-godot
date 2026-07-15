@@ -247,6 +247,10 @@ text = "Congratulations
 Thanks for testing!"
 horizontal_alignment = 1
 
+[node name="Label" type="Label" parent="GameManager" unique_id=1314884818]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="TileMap" type="TileMap" parent="." unique_id=354487561]
 position = Vector2(105, 141)
 tile_set = SubResource("TileSet_uwrxv")
@@ -336,15 +340,31 @@ position = Vector2(194, 189)
 [node name="Labels" type="Node" parent="." unique_id=779569556]
 
 [node name="Label" type="Label" parent="Labels" unique_id=1039583489]
-offset_left = 2.0
-offset_top = 123.0
-offset_right = 90.0
-offset_bottom = 144.0
+offset_left = 8.0
+offset_top = 152.0
+offset_right = 96.0
+offset_bottom = 173.0
 theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
 theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 8
 text = "Press <space> 
 to jump"
+
+[node name="Label5" type="Label" parent="Labels" unique_id=518198434]
+anchors_preset = -1
+anchor_left = 0.108
+anchor_top = 0.147
+anchor_right = 0.108
+anchor_bottom = 0.147
+offset_left = -108.416
+offset_top = 0.7440033
+offset_right = 19.584
+offset_bottom = 30.744003
+theme_override_colors/font_color = Color(0.8732984, 0.8732984, 0.8732984, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Collect all coins and reach the finish"
+autowrap_mode = 3
 
 [node name="Label2" type="Label" parent="Labels" unique_id=898389412]
 offset_left = 509.0
@@ -376,3 +396,9 @@ theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 8
 text = "Good job"
 horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Labels" unique_id=1692606881]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Labels/Timer" to="GameManager" method="_on_timer_timeout"]

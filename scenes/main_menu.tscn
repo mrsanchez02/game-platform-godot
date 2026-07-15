@@ -318,6 +318,14 @@ button_pressed = true
 text = "Fullscreen"
 script = ExtResource("7_oa1go")
 
+[node name="Label2" type="Label" parent="." unique_id=1244117341]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 608.0
+offset_right = 1134.0
+offset_bottom = 631.0
+text = "Alpha v1.0.2"
+
 [connection signal="pressed" from="MainButtons/StartBtn" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/SettingsBtn" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MainButtons/ExitBtn" to="." method="_on_exit_pressed"]
