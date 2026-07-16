@@ -14,7 +14,7 @@ func add_point():
 	if allCoins:
 		congratulations.visible = true
 	coins_collected.text = "You collected " + str(score) + "/16 coins"
-	#print(score)
+	return score
 
 func _on_timer_timeout() -> void:
 	label_5.visible = false
