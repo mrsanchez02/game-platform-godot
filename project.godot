@@ -25,6 +25,7 @@ buses/default_bus_layout="uid://dxhbh1w1so4l"
 [autoload]
 
 Music="*uid://dyls1kfy3jvlt"
+Juice="*uid://bc0qng34ni1os"
 
 [display]
 
