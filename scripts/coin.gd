@@ -20,8 +20,7 @@ func _on_body_entered(_body: Node2D) -> void:
 	# Oculta la parte visual de la moneda.
 	hide()
 
-	#print("Picking up coin, blink")
-
+	audio_stream_player_2d.pitch_scale = randf_range(0.9, 1.1)
 	audio_stream_player_2d.play()
 	await audio_stream_player_2d.finished
 
