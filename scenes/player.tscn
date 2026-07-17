@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://cdpiphig38752" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="AudioStream" uid="uid://g0fmxfw6ts5j" path="res://assets/sounds/jump.wav" id="3_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://ccd4hrseksybb" path="res://scenes/touch_controls.tscn" id="4_dqkch"]
+[ext_resource type="AudioStream" uid="uid://2mjtd6iy023c" path="res://assets/sounds/power_up.wav" id="4_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://diber8a2hrf6v" path="res://assets/sounds/hurt.wav" id="5_tuyoq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ni07"]
 atlas = ExtResource("1_3vyb7")
@@ -315,6 +317,20 @@ autoplay = "idle"
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_6n047")
 
+[node name="DustParticles" type="CPUParticles2D" parent="." unique_id=516548847]
+position = Vector2(0, -1)
+emitting = false
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.85
+direction = Vector2(1, -1)
+spread = 50.0
+gravity = Vector2(0, 220)
+initial_velocity_min = 25.0
+initial_velocity_max = 55.0
+scale_amount_max = 2.0
+color = Color(0.9309246, 0.9309246, 0.9063318, 1)
+
 [node name="AudioJump" type="AudioStreamPlayer2D" parent="." unique_id=765356332]
 stream = ExtResource("3_qhqgy")
 volume_db = -16.0
@@ -328,6 +344,21 @@ drag_vertical_enabled = true
 drag_left_margin = 0.3
 drag_right_margin = 0.3
 drag_bottom_margin = 0.15
+
+[node name="DoubleJump" type="AudioStreamPlayer" parent="." unique_id=265627860]
+stream = ExtResource("4_qlg0r")
+volume_db = -16.0
+bus = &"SFX"
+
+[node name="jump_sound" type="AudioStreamPlayer" parent="." unique_id=53876807]
+stream = ExtResource("3_qhqgy")
+volume_db = -16.0
+bus = &"SFX"
+
+[node name="Hurt" type="AudioStreamPlayer" parent="." unique_id=1919981004]
+stream = ExtResource("5_tuyoq")
+volume_db = -16.0
+bus = &"SFX"
 
 [node name="Control" type="Control" parent="." unique_id=1204267912]
 layout_mode = 3

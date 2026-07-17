@@ -222,18 +222,6 @@ _data = {
 unique_name_in_owner = true
 script = ExtResource("1_gee14")
 
-[node name="CoinsCollected" type="Label" parent="GameManager" unique_id=597239583]
-offset_left = 592.0
-offset_top = -134.0
-offset_right = 696.0
-offset_bottom = -115.0
-theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
-theme_override_fonts/font = ExtResource("9_0tnpc")
-theme_override_font_sizes/font_size = 8
-text = "You collected X coins"
-horizontal_alignment = 1
-autowrap_mode = 2
-
 [node name="Congratulations" type="Label" parent="GameManager" unique_id=791310749]
 visible = false
 offset_left = 585.0
@@ -250,6 +238,14 @@ horizontal_alignment = 1
 [node name="Label" type="Label" parent="GameManager" unique_id=1314884818]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="HUBLayer" type="CanvasLayer" parent="." unique_id=1152104491]
+
+[node name="CoinCounter" type="Label" parent="HUBLayer" unique_id=297928484]
+offset_top = 60.0
+offset_right = 112.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("9_0tnpc")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=354487561]
 position = Vector2(105, 141)
